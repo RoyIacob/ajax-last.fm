@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recent Scrobbles</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="panel">
+        <form>
+            <input type="text" placeholder="top played artists by user" id="search-bar">
+        </form> <br>
+        <div id="ajaxResponse">Examples: alphachino, john, jack</div>
+        <script src="handlebars-v2.0.0.js"></script>
+        <script type="text/handlebars" id="scrobble_template">
+                    <div class="result">
+                        {{index}}. {{artist}}: {{play_count}} plays
+                    </div>
+        </script>
+        <div id="last"></div>
+    </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+    <script src="debounce.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
